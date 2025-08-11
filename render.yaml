@@ -10,6 +10,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        value: mongodb+srv://ramchodhry02355:MANISH@cluster0.ajhs9.mongodb.net/urlshortener
+        sync: false
       - key: CORS_ORIGIN
         value: https://your-frontend-domain.onrender.com
