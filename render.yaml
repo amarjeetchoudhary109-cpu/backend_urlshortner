@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: url-shortener-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /v1/api/url/test
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb+srv://ramchodhry02355:MANISH@cluster0.ajhs9.mongodb.net/urlshortener
+      - key: CORS_ORIGIN
+        value: https://your-frontend-domain.onrender.com
